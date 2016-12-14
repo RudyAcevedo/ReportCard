@@ -1,78 +1,81 @@
-import static java.lang.Integer.parseInt;
-
 /**
  * Created by Rudster on 7/25/2016.
  */
 public class ReportCard {
 
-    public final String mNameOfStudent;
-    public final int mGeometryGrade;
-    public final int mChemistryGrade;
-    public final int mEnglishGrade;
-    public final int mHistoryGrade;
-    public final int mPhysicalFitnessGrade;
+    public String mNameOfStudent;
+    public int mGeometryGrade;
+    public int mChemistryGrade;
+    public int mEnglishGrade;
+    public int mHistoryGrade;
+    public int mPhysicalFitnessGrade;
+    public static final String schoolName = "Android High";
 
 
     public ReportCard(String nameOfStudent, int geometryGrade, int chemistryGrade, int englishGrade,
                       int historyGrade, int physicalFitnessGrade) {
-        this.mNameOfStudent = nameOfStudent;
-        this.mGeometryGrade = geometryGrade;
-        this.mChemistryGrade = chemistryGrade;
-        this.mEnglishGrade = englishGrade;
-        this.mHistoryGrade = historyGrade;
-        this.mPhysicalFitnessGrade = physicalFitnessGrade;
+        mNameOfStudent = nameOfStudent;
+        mGeometryGrade = geometryGrade;
+        mChemistryGrade = chemistryGrade;
+        mEnglishGrade = englishGrade;
+        mHistoryGrade = historyGrade;
+        mPhysicalFitnessGrade = physicalFitnessGrade;
 
     }
 
-    public void setNameOfStudent(String mNameOfStudent) {
+    public void setNameOfStudent(String name) {
+        this.mNameOfStudent = name;
     }
 
-    public void setGeometryGrade(int geometryGrade) {
+    public void setGeometryGrade(int geoGrade) {
+        this.mGeometryGrade = geoGrade;
     }
 
-    public void setChemistryGrade(int chemistryGrade){
-
-    }
-
-    public void setEnglishGrade(int englishGrade){
-
-    }
-
-    public void setHistoryGrade(int historyGrade){
+    public void setChemistryGrade(int chemGrade) {
+        this.mChemistryGrade = chemGrade;
 
     }
 
-    public void setPhysicalFitnessGrade(int physicalFitnessGrade){
+    public void setEnglishGrade(int engGrade) {
+        this.mEnglishGrade = engGrade;
 
     }
 
-    public String getNameOfStudent(){
+    public void setHistoryGrade(int histGrade) {
+        this.mHistoryGrade = histGrade;
+
+    }
+
+    public void setPhysicalFitnessGrade(int phyGrade) {
+        mPhysicalFitnessGrade = phyGrade;
+
+    }
+
+    public String getNameOfStudent() {
         return mNameOfStudent;
     }
 
-    public int getGeometryGrade(){
+    public int getGeometryGrade() {
         return mGeometryGrade;
     }
 
-    public int getChemistryGrade(){
+    public int getChemistryGrade() {
         return mChemistryGrade;
     }
 
-    public int getEnglishGrade(){
+    public int getEnglishGrade() {
         return mEnglishGrade;
     }
 
-    public int getHistoryGrade(){
+    public int getHistoryGrade() {
         return mHistoryGrade;
     }
 
-    public int getPhysicalFitnessGrade(){
-        return parseInt(null);
-    }
+    public int getPhysicalFitnessGrade() {return mPhysicalFitnessGrade;}
 
     @Override
-    public String toString(){
-        String studentGrades = getNameOfStudent() + "grades:"
+    public String toString() {
+        String studentGrades = getNameOfStudent() + ", " + schoolName +  "grades:"
                 + "\nGeometry: " + getGeometryGrade()
                 + "\nChemistry: " + getChemistryGrade()
                 + "\nEnglish: " + getEnglishGrade()
